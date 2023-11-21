@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
         body {
             margin: 0;
             padding: 0;
             font-family: sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         .main {
@@ -21,7 +24,7 @@
         }
 
         .left {
-            width: 50%;
+            width: 60%;
             height: 100vh;
             background: #fff;
             padding: 30px 100px;
@@ -34,7 +37,7 @@
         }
 
         .right {
-            width: 50%;
+            width: 30%;
             height: 100vh;
             background: #fff;
             padding: 30px 100px;
@@ -46,11 +49,12 @@
             justify-content: center;
         }
 
-        .left h1 {
+        .left .cityName {
             margin: 0;
             padding: 0 0 20px;
-            font-weight: 200;
-            font-size: 30px;
+            font-weight: 600;
+            font-size: 100px;
+            color: rgb(0, 0, 102);
         }
 
         .left span {
@@ -64,7 +68,38 @@
         }
 
         .right img {
-            width: 100%;
+            width: 700px;
+        }
+        .datas {
+            width: 100vw;
+            /* height: 50vh; */
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 50px; */
+            /* border: 1px solid black; */
+        }
+        .datacard {
+            width: auto;
+            height: 30vh;
+            border: 1px solid rgb(0, 0, 102);
+            border-radius: 20px;
+            margin: auto 10px;
+            padding: 3vh;
+        }
+        /* .datacard p {
+
+        } */
+        .datacard .data {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .data h1 {
+            font-size: 50px;
+            font-weight: 600;
+            color: rgb(0, 0, 102);
         }
     </style>
 </head>
@@ -72,10 +107,30 @@
 <body>
     <div class="main">
         <div class="left">
-            <h1>Kolkata</h1>
-            <span><b>Types of waste collected</b>: 20 (avg.)</span> <br>
-            <span><b>Waste Recycled</b>: 5049 Kg</span> <br>
-            <span><b>Waste left</b>: 4663 kg</span>
+            <h1 class="cityName">Kolkata</h1>
+            <!-- <span><b>Types of waste collected</b>: 12 <br>
+            <b>Waste Recycled</b>: 630 Kg <br>
+            <b>Waste left</b>: 509kg</span> -->
+            <div class="datas">
+                <div class="datacard typeWaste">
+                    <p>Types of waste collected (last month)</p>
+                    <div class="data">
+                        <h1>37</h1>
+                    </div>
+                </div>
+                <div class="datacard recycledWaste">
+                    <p>Recycled waste (last month)</p>
+                    <div class="data">
+                        <h1>866 KG</h1>
+                    </div>
+                </div>
+                <div class="datacard leftWaste">
+                    <p>Left to recycle (last month)</p>
+                    <div class="data">
+                        <h1>593 KG</h1>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right">
             <img src="analytics.png" alt="">
